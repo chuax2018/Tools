@@ -99,7 +99,7 @@ def sync_two_folders_by_md5(src_folder_path, dst_folder_path):
     for independent_key in independent_keys:
         # 对于src中刚出现的文件，拷贝到dst
         if independent_key in src_keys:
-            src_target_path = src_file_dict.get(common_key)
+            src_target_path = src_file_dict.get(independent_key)
             dst_target_path = dst_folder_path + independent_key
             file_dir, _ = os.path.split(dst_target_path)
             File(file_dir).mkdirs()
