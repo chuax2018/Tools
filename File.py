@@ -106,7 +106,7 @@ class File:
                         if not include_hidden:
                             if "." in thislayer_filename:
                                 continue
-                        filepath_list.extend(File(thislayer_filepath).get_filepath_in_dir())
+                        filepath_list.extend(File(thislayer_filepath).get_filepath_in_dir(include_hidden))
                     else:  # handle file
                         filepath_list.append(thislayer_filepath)
 
